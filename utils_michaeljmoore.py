@@ -118,10 +118,13 @@ Minimum Satisfaction Score: {min_score}
 Maximum Satisfaction Score: {max_score}
 Mean Satisfaction Score:    {mean_score:.2f}
      Standard Deviation:    {stdev_score:.2f}
+Location:                   {location}
+Office Locations            {office_locations}
+Number of Locations         {count_of_locations}
 **********************************************************
 """
 
-# TODO: Modify the byline f-string to display your new variables as well. Use curly braces {} to embed each variable.
+
 
 #####################################
 # Define Global Functions
@@ -160,8 +163,8 @@ def main() -> None:
     loguru.logger.info("Byline:\n" + get_byline())
 
     try:
-        # TODO: Uncomment next line if you want audio feedback (use CTRL+C to stop)
-        # read_byline_aloud()
+        
+        read_byline_aloud()
         pass
     except KeyboardInterrupt:
         logger.info("Speech interrupted by user (Ctrl+C).")
